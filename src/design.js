@@ -32,7 +32,7 @@ function App() {
        header: "font-[600] text-[22px] text-white w-[80%]",
         courses: [
             {
-                name: "Software Development",
+                name: "introduction to Backend development 1",
                 description: "anything you want",
                 price: 200,
                 firstName:"pysavant ",
@@ -51,7 +51,7 @@ function App() {
       header: "font-[600] text-[22px] text-white w-[80%]",
         courses: [
             {
-                name: "introduction to Dev and Cloud Computing",
+                name: "introduction to Backend development 1",
                 description: "anything you want",
                 price: 200,
                 firstName:"pysavant ",
@@ -70,7 +70,7 @@ function App() {
       header: "font-[600] text-[22px] text-white w-[80%]",
         courses: [
             {
-                name: "introduction to Desktop Development",
+                name: "introduction to Backend development 1",
                 description: "anything you want",
                 price: 200,
                 firstName:"pysavant ",
@@ -89,7 +89,7 @@ function App() {
   header: "font-[600] text-[22px] text-white w-[80%]",
         courses: [
             {
-                name: "introduction to  Project Mangement",
+                name: "introduction to Backend development 1",
                 description: "anything you want",
                 price: 200,
                 firstName:"pysavant ",
@@ -108,7 +108,7 @@ function App() {
       header: "font-[600] text-[22px] text-white w-[80%]",
         courses: [
             {
-                name: "introduction to HR and Talent",
+                name: "introduction to Backend development 1",
                 description: "anything you want",
                 price: 200,
                 firstName:"pysavant ",
@@ -127,7 +127,7 @@ function App() {
       header: "font-[600] text-[22px] text-white w-[80%]",
         courses: [
             {
-                name: "introduction to Sales and marketing",
+                name: "introduction to Backend development 1",
                 description: "anything you want",
                 price: 200,
                 firstName:"pysavant ",
@@ -146,7 +146,7 @@ function App() {
       header: "font-[600] text-[22px] text-white w-[80%]",
         courses: [
             {
-                name: "introduction to Machine Learning",
+                name: "introduction to Backend development 1",
                 description: "anything you want",
                 price: 200,
                 firstName:"pysavant ",
@@ -174,7 +174,7 @@ function App() {
             {selectedCategory ? (
               <>
                 <button onClick={resetSelectedCategory} className="text-[14px] text-white underline cursor-pointer mr-2">
-                  Back
+                  {/* <FaArrowLeft /> */}
                 </button>
                 <p className="font-bold text-[20px] max-md:text-[24px] text-white">
                   {selectedCategory.title}
@@ -188,8 +188,8 @@ function App() {
           </div>
         <div className="flex">
           
-          <div className="">
-            <div className={`grid ${selectedCategory ? 'grid-cols-1' : 'grid-cols-3'} gap-4 max-md:grid-cols-2 py-4 max-md:py-2 gap-y-3 h-full overflow-visible`}>
+          <div className="w-[30%] max-md:w-[100%]">
+            <div className="flex flex-col gap-y-7 pt-8 max-md:pt-0 pr-2 max-md:flex-col overflow-x-visible max-md:items-stretch gap-x-3">
               {categories.map((category) => (
                 <div key={category.id}>
                   <div
@@ -199,9 +199,8 @@ function App() {
                       cursor: 'pointer',
                     }}
                   >
-                  <div className="flex overflow-visible h-full max-md:h-[180px] py-4 items-center">
-                    <div className={`course-card overflow-visible h-full flex flex-col justify-around pt-4 rounded-[20px] max-md:h-full p-4 bg-gradient-to-br from-[#FF00B8] via-[#585FFF] to-[#920DE3] ${selectedCategory ? 'flex-col' : ''}`} style={{ width: "500px" }}>
-                      <div className="flex relative flex-col justify-between py-2 overflow-visible w-full">
+                    <div className="course-card overflow-visible flex flex-col justify-around pt-4 rounded-[20px] h-fit max-md:h-[170px] p-8 bg-gradient-to-br from-[#FF00B8] w-full via-[#585FFF] to-[#920DE3]">
+                      <div className="flex relative justify-between py-2 overflow-visible w-full">
                         <h3 className={category.header ? category.header : "font-[600] text-white "}>
                           {category.title}
                         </h3>
@@ -212,7 +211,6 @@ function App() {
                       </p>
                     </div>
                   </div>
-                </div>
                 </div>
               ))}
             </div>
