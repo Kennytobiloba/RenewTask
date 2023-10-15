@@ -189,7 +189,7 @@ function App() {
         <div className="flex">
           
           <div className="">
-            <div className={`grid ${selectedCategory ? 'grid-cols-1' : 'grid-cols-3'} gap-4 max-md:grid-cols-2 py-4 max-md:py-2 gap-y-3 h-full overflow-visible`}>
+            <div className={`grid ${selectedCategory ? 'grid-cols-1' : 'grid-cols-3 '} gap-4 max-md:grid-cols-2 py-4 max-md:py-2 gap-y-3 h-full overflow-visible`}>
               {categories.map((category) => (
                 <div key={category.id}>
                   <div
@@ -200,7 +200,7 @@ function App() {
                     }}
                   >
                   <div className="flex overflow-visible h-full max-md:h-[180px] py-4 items-center">
-                    <div className={`course-card overflow-visible h-full flex flex-col justify-around pt-4 rounded-[20px] max-md:h-full p-4 bg-gradient-to-br from-[#FF00B8] via-[#585FFF] to-[#920DE3] ${selectedCategory ? 'flex-col' : ''}`} style={{ width: "500px" }}>
+                    <div className={`course-card overflow-visible h-full flex flex-col justify-around pt-4 rounded-[20px] max-md:h-full p-4 bg-gradient-to-br from-[#FF00B8] via-[#585FFF] to-[#920DE3] ${selectedCategory ? 'flex-col' : 'h-[150px]'}`} style={{ width: "400px" }}>
                       <div className="flex relative flex-col justify-between py-2 overflow-visible w-full">
                         <h3 className={category.header ? category.header : "font-[600] text-white "}>
                           {category.title}
